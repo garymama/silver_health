@@ -76,7 +76,7 @@
 .nav-sm ul.nav.child_menu {
   left: 100%;
   position: absolute;
-  margin-left: 5px;
+  border-left: solid 1px #eee;
   top: 0;
   width: 210px;
   z-index: 4000;
@@ -455,12 +455,32 @@ a:hover, a:focus {
   height: 60px;
   background-color: #2CAFED;
 }
+.main_header .nav>li{
+  float: left;
+}
+.main_header .navbar-right {
+  float: right;
+}
+.main_header .navbar-nav{
+  margin: 0
+}
 .header_title {
   color: #ffffff;
   font-size: 18px;
+  float: left;
   line-height: 60px;
   margin-left: 20px;
 }
+
+@media (max-width: 480px) {
+  .header_title {
+    width: 230px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+    
 .main_header .nav.navbar-nav > li > a {
   color: #ffffff !important;
   font-size: 18px;
@@ -564,7 +584,7 @@ a:hover, a:focus {
   padding: 13px 15px 12px; }
 
 .nav.side-menu > li.current-page, .nav.side-menu > li.active {
-  border-right: 5px solid #1ABB9C; }
+  border-left: 5px solid #1ABB9C; }
 
 .nav li.current-page {
   background: rgba(255, 255, 255, 0.05); }
@@ -1507,7 +1527,12 @@ span.right {
   width: 12px; }
 
 .tile_count .tile_stats_measure {
-
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.tile_count .tile_stats_measure:hover .measure_left,
+.tile_count .tile_stats_measure:active .measure_left {
+  background-color: #115588;
 }
 .measure_left {
     background-color: #2977BA;
@@ -1519,6 +1544,7 @@ span.right {
     font-size: 40px;
     padding-left: 5px;
     text-align: center;
+    transition: 0.5s;
 }
 
 .measure_right {
