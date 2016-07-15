@@ -595,8 +595,11 @@ a:hover, a:focus {
 .nav li li li.current-page {
   background: none; }
 
-.nav li li.current-page a {
+.nav li li.current-page {
   color: #333333;
+  background: #ffffff;
+   }
+.nav li li.current-page:hover {
   background: #f9f9f9;
    }
 
