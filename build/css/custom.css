@@ -966,7 +966,10 @@ legend {
   color: #768399;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px; }
-
+.wz_step_one_form {
+  width : calc(100% - 250px);
+  float: right;
+}
 /** Contacts **/
 /* *********  /custom accordion  **************************** */
 /* *********  dashboard widget  **************************** */
@@ -4228,8 +4231,12 @@ ul.notifications {
 
 /** /FullCalendar **/
 /** Dropzone.js **/
-.dropzone {
-  min-height: 300px;
-  border: 1px solid #e5e5e5; }
+.dropzone {    
+    min-height: 250px;
+    padding: 80px 10px;
+    border: 1px solid #e5e5e5;
+    width: 200px;
+    float: left;
+}
 
 /** /Dropzone.js **/
