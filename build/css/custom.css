@@ -3662,8 +3662,8 @@ fieldset {
 .form_wizard .stepContainer {
   display: block;
   position: relative;
-  margin: 0;
   padding: 0;
+  margin: 0;
   border: 0 solid #CCC;
   overflow-x: hidden; }
 
@@ -4232,10 +4232,11 @@ ul.notifications {
 /** /FullCalendar **/
 /** Dropzone.js **/
 .dropzone {    
-    min-height: 250px;
-    padding: 80px 10px;
+    min-height: 170px;
+    padding: 10px 10px;
+    margin-left: 5%;
     border: 1px solid #e5e5e5;
-    width: 200px;
+    width: 170px;
     float: left;
 }
 

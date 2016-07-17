@@ -174,14 +174,14 @@
               <div class="nav toggle">
                 <a id="menu_toggle"><i class="fa fa-bars"></i></a>
               </div>
-              <div class="header_navigation">Caring Plan</div>
+              <div class="header_navigation">Caring Plan > Create Portfolio</div>
 
               <ul class="nav navbar-nav navbar-right">
                 <div class="nav-right-widget pull-right">
                   <div class="control-group">
                     <div class="controls">
                       <div class="col-md-12 xdisplay_inputx form-group has-feedback">
-                        <button type="button" class="btn btn-info" >New Portfolio</button>
+                        <button type="button" class="btn btn-info" >Cancel</button>
                       </div>
                     </div>
                   </div>
@@ -198,7 +198,7 @@
           <div class="row">
             <div class="x_panel">
               <div class="x_title">
-                <h2>Form Wizards <small>Sessions</small></h2>
+                <h2>Create Portfolio</h2>
                 <ul class="nav navbar-right panel_toolbox">
                   <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                   </li>
@@ -214,135 +214,193 @@
                   <li><a class="close-link"><i class="fa fa-close"></i></a>
                   </li>
                 </ul>
-                <div class="clearfix"></div>
+              <div class="clearfix"></div>
               </div>
               <div class="x_content">
-
-
                 <!-- Smart Wizard -->
                 <div id="wizard" class="form_wizard wizard_horizontal">
                   <ul class="wizard_steps anchor">
                     <li>
                       <a href="#step-1" class="selected" isdone="1" rel="1">
                         <span class="step_no">1</span>
-                        <span class="step_descr">
-                                          Step 1<br>
-                                          <small>Step 1 Information</small>
-                                      </span>
+                        <span class="step_descr">Step 1<br><small>Step 1 Information</small></span>
                       </a>
                     </li>
                     <li>
                       <a href="#step-2" class="disabled" isdone="0" rel="2">
                         <span class="step_no">2</span>
-                        <span class="step_descr">
-                                          Step 2<br>
-                                          <small>Step 2 Assessment</small>
-                                      </span>
+                        <span class="step_descr">Step 2<br><small>Step 2 Assessment</small></span>
                       </a>
                     </li>
                     <li>
                       <a href="#step-3" class="disabled" isdone="0" rel="3">
                         <span class="step_no">3</span>
-                        <span class="step_descr">
-                                          Step 3<br>
-                                          <small>Step 3 Classification</small>
-                                      </span>
+                        <span class="step_descr">Step 3<br><small>Step 3 Care Action</small></span>
                       </a>
                     </li>
                     <li>
                       <a href="#step-4" class="disabled" isdone="0" rel="4">
                         <span class="step_no">4</span>
-                        <span class="step_descr">
-                                          Step 4<br>
-                                          <small>Step 4 Summary</small>
-                                      </span>
+                        <span class="step_descr">Step 4<br><small>Step 4 Summary</small> </span>
                       </a>
                     </li>
                   </ul>
-                  
-                  
-                  
-                  
 
-                <div class="stepContainer" style="height: 287px;"><div id="step-1" class="content" style="display: block;">
-                    <form action="form_upload.html" class="dropzone"></form>
-                    <form class="form-horizontal form-label-left wz_step_one_form"><div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">First Name <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Last Name <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Middle Name / Initial</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Gender</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <div id="gender" class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                              <input type="radio" name="gender" value="male"> &nbsp; Male &nbsp;
-                            </label>
-                            <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                              <input type="radio" name="gender" value="female"> Female
-                            </label>
+                  <div class="stepContainer">
+                    <div id="step-1" class="content" style="display: block; height: 400px;">
+                      <form action="form_upload.html" class="dropzone"><span class="text-center">Profile Image</span></form>
+                      <form class="form-horizontal form-label-left wz_step_one_form">
+                        <div class="form-group" >
+                          <label class="control-label col-md-3 col-sm-3 col-xs-12" for="record-number">Record Number <span class="required">*</span>
+                          </label>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="record-number" required="required" name="record-number" class="form-control col-md-7 col-xs-12">
                           </div>
                         </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Of Birth <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                        <div class="form-group">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name <span class="required">*</span>
+                          </label>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="name" name="name" required="required" class="form-control col-md-7 col-xs-12">
+                          </div>
                         </div>
+                        <div class="form-group">
+                          <label for="age" class="control-label col-md-3 col-sm-3 col-xs-12">Age <span class="required">*</span></label>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input id="age" class="form-control col-md-7 col-xs-12" type="text" name="age">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-12">Gender <span class="required">*</span></label>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div id="gender" class="btn-group" data-toggle="buttons">
+                              <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                                <input type="radio" name="gender" value="male"> &nbsp; Male &nbsp;
+                              </label>
+                              <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                                <input type="radio" name="gender" value="female"> Female
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-12">Residence Address <span class="required">*</span>
+                          </label>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input id="residence-address-1" class="form-control col-md-7 col-xs-12" type="text" name="residence-address">
+                          </div>
+                          <br />&nbsp;<br /><br />
+                          <div class="col-md-offset-3 col-sm-offset-3 col-md-6 col-sm-6 col-xs-12">
+                            <input id="residence-address-2" class="form-control col-md-7 col-xs-12" type="text" name="residence-address">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="hkid" class="control-label col-md-3 col-sm-3 col-xs-12">HKID <span class="required">*</span></label>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input id="hkid" class="form-control col-md-7 col-xs-12" type="text" name="hkid">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="ha-record-number" class="control-label col-md-3 col-sm-3 col-xs-12">HA Record Number <span class="required">*</span></label>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input id="ha-record-number" class="form-control col-md-7 col-xs-12" type="text" name="ha-record-number">
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div id="step-2" class="content" style="display: none; height: 400px;">
+                      <div class="col-md-6">
+                        <h2>Classification of Individual</h2>
+                        <div class="clearfix"></div>
+                        <form class="form-horizontal form-label-left">
+                          <div class="form-group" >
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="individual-condition">Individual Condition <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                              <select id="individual-condition" class="form-control" required="">
+                                <option value="">Select...</option>
+                                <option value="normal">Normal Condition</option>
+                                <option value="normal_">Normal condition with personal assistance required</option>
+                                <option value="mouth">Health issue and concern</option>
+                                <option value="mouth">Physical issue and concern</option>
+                              </select>
+                            </div>
+                          </div> 
+                          <div class="form-group" >
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="level-mobilization">Level of Mobilization <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                              <select id="level-mobilization" class="form-control" required="">
+                                <option value="">Select...</option>
+                                <option value="press">Seating in wheel chair</option>
+                                <option value="net">General walking aids required</option>
+                                <option value="mouth">Heavy duty walking aids required</option>
+                                <option value="mouth">Laid down in the bed</option>
+                                <option value="mouth">Falls History</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group" >
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="feeding-condition">Feeding Condition <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                              <select id="feeding-condition" class="form-control" required="">
+                                <option value="">Select...</option>
+                                <option value="press">No help required for feeding</option>
+                                <option value="net">Need help for feeding</option>
+                                <option value="mouth">Take longer time for feeding</option>
+                                <option value="mouth">Swallowing difficulties</option>
+                              </select>
+                            </div>
+                          </div> 
+                          <div class="form-group" >
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="feeding-condition">Vital Sign Condition <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                              <select id="feeding-condition" class="form-control" required="">
+                                <option value="">Select...</option>
+                                <option value="press">Need monitoring - short term</option>
+                                <option value="net">Need monitoring - long term</option>
+                              </select>
+                            </div>
+                          </div> 
+                          <div class="form-group" >
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="elimination-needs">Elimination Needs <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                              <select id="elimination-needs" class="form-control" required="">
+                                <option value="">Select...</option>
+                                <option value="press">Self care</option>
+                                <option value="net">Need assistance</option>
+                              </select>
+                            </div>
+                          </div> 
+                          <div class="form-group" >
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="elimination-needs">Other Condition 
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                              <select id="elimination-needs" class="form-control" required="">
+                                <option value="">Select...</option>
+                                <option value="press">Smoker</option>
+                                <option value="net">Depression</option>
+                                <option value="press">Wandering</option>
+                                <option value="net">Demented</option>
+                              </select>
+                            </div>
+                          </div> 
+                        </form>
                       </div>
+                      <div class="col-md-6">
+                        <h2>Appearance Condition</h2>
+                        <div> alfred's widget </div> 
+                      </div>
+                    </div>
+                    <div id="step-3" class="content" style="display: none;">
 
-                    </form>
-
-                  </div><div id="step-2" class="content" style="display: none;">
-                    <h2 class="StepTitle">Step 2 Content</h2>
-                    <p>
-                      do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                      fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                  </div><div id="step-3" class="content" style="display: none;">
-                    <h2 class="StepTitle">Step 3 Content</h2>
-                    <p>
-                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                      eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                  </div><div id="step-4" class="content" style="display: none;">
-                    <h2 class="StepTitle">Step 4 Content</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                  </div></div>
+                    </div>
+                    <div id="step-4" class="content" style="display: none;">
+                    </div>
+                  </div>
                 </div>
                 <!-- End SmartWizard Content -->
               </div>
