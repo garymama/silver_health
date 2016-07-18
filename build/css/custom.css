@@ -4365,6 +4365,28 @@ svg {
   display: block;
 }
 
+.care-title {
+  display: block;
+  border-bottom: solid 2px #eee;
+  margin-bottom: 10px;
+}
+
+.care-action-group {
+  margin-bottom: 10px;
+}
+
+.care-checkbox {
+  margin-right: 10px !important;
+}
+
+.care-checkbox + label {
+  cursor: pointer;
+}
+
+.input-group.care-action {
+  margin-bottom: 0;
+}
+
 .tg  {border-collapse:collapse;border-spacing:0;margin: 10px auto;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
 .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
