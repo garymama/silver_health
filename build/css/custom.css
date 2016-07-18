@@ -4365,9 +4365,26 @@ svg {
   display: block;
 }
 
+.care-title {
+  display: block;
+  border-bottom: solid 2px #eee;
+  margin-bottom: 10px;
+}
 
+.care-action-group {
+  margin-bottom: 10px;
+}
 
+.care-checkbox {
+  margin-right: 10px !important;
+}
 
+.care-checkbox + label {
+  cursor: pointer;
+}
 
+.input-group.care-action {
+  margin-bottom: 0;
+}
 
 
