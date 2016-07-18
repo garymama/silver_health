@@ -4304,6 +4304,70 @@ svg {
 .foot-right:active,
 .thigh-left:active,
 .calf-left:active,
-.foot-left:active {
+.foot-left:active,
+.hand-right.active,
+.forearm-right.active,
+.arm-right.active,
+.hand-left.active,
+.forearm-left.active,
+.arm-left.active,
+.head.active, 
+.torso-upper.active,
+.torso-lower.active,
+.thigh-right.active,
+.calf-right.active,
+.foot-right.active,
+.thigh-left.active,
+.calf-left.active,
+.foot-left.active {
   fill: #1A66A1;
 }
+.conditioncontainer {
+    margin-bottom: 15px;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    border-bottom: solid 1px #eee;
+}
+
+.left-thigh-condition-container,
+.right-thigh-condition-container,
+.left-calf-condition-container,
+.right-calf-condition-container,
+.left-foot-condition-container,
+.right-foot-condition-container,
+.left-calf-condition-container,
+.right-calf-condition-container,
+.right-arm-condition-container,
+.left-arm-condition-container,
+.left-hand-condition-container,
+.right-hand-condition-container,
+.lower-body-condition-container,
+.upper-body-condition-container,
+.head-condition-container {
+  display: none;
+}
+.left-thigh-condition-container.active,
+.right-thigh-condition-container.active,
+.left-calf-condition-container.active,
+.right-calf-condition-container.active,
+.left-foot-condition-container.active,
+.right-foot-condition-container.active,
+.left-calf-condition-container.active,
+.right-calf-condition-container.active,
+.right-arm-condition-container.active,
+.left-arm-condition-container.active,
+.left-hand-condition-container.active,
+.right-hand-condition-container.active,
+.lower-body-condition-container.active,
+.upper-body-condition-container.active,
+.head-condition-container.active {
+  display: block;
+}
+
+
+
+
+
+
+

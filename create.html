@@ -660,68 +660,6 @@
                             </div>
                           </div>
                         </div>
-                        <div class="conditioncontainer left-leg-condition-container">
-                          <div class="form-group">
-                            <label class="control-label col-sm-3 col-xs-12">Category: </label>
-                            <div class="col-sm-9 col-xs-12">
-                              <label>Left Leg</label>
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label class="control-label col-sm-3 col-xs-12">Condition: </label>
-                            <div class="col-sm-9 col-xs-12">
-                              <select id="upper-part-body" class="form-control" required="">
-                                <option value="">Select...</option>
-                                <option value="press">Numbness</option>
-                                <option value="press">Weakness</option>
-                                <option value="press">Fracture</option>
-                                <option value="press">Pain</option>
-                                <option value="press">Amputation</option>
-                                <option value="press">Swelling</option>
-                                <option value="press">Redness</option>
-                                <option value="press">Wound</option>
-                                <option value="press">Other</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label class="control-label col-sm-3 col-xs-12">Comment: </label>
-                            <div class="col-sm-9 col-xs-12">
-                              <input class="form-control col-xs-12" type="text" name="comment">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="conditioncontainer right-leg-condition-container">
-                          <div class="form-group">
-                            <label class="control-label col-sm-3 col-xs-12">Category: </label>
-                            <div class="col-sm-9 col-xs-12">
-                              <label>Right Leg</label>
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label class="control-label col-sm-3 col-xs-12">Condition: </label>
-                            <div class="col-sm-9 col-xs-12">
-                              <select id="upper-part-body" class="form-control" required="">
-                                <option value="">Select...</option>
-                                <option value="press">Numbness</option>
-                                <option value="press">Weakness</option>
-                                <option value="press">Fracture</option>
-                                <option value="press">Pain</option>
-                                <option value="press">Amputation</option>
-                                <option value="press">Swelling</option>
-                                <option value="press">Redness</option>
-                                <option value="press">Wound</option>
-                                <option value="press">Other</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label class="control-label col-sm-3 col-xs-12">Comment: </label>
-                            <div class="col-sm-9 col-xs-12">
-                              <input class="form-control col-xs-12" type="text" name="comment">
-                            </div>
-                          </div>
-                        </div>
                         <div class="conditioncontainer left-calf-condition-container">
                           <div class="form-group">
                             <label class="control-label col-sm-3 col-xs-12">Category: </label>
@@ -853,6 +791,7 @@
 
                   </div>
                   <div id="step-4" class="content" style="display: none;">
+                    
                   </div>
                     <!-- End SmartWizard Content -->
                 </div>
@@ -894,42 +833,56 @@
   //Body
 
   $('.head').click(function(){
-
+    $(this).toggleClass('active');
+    $('.head-condition-container').toggleClass('active');
   });
   $('.torso-upper').click(function(){
-
+    $(this).toggleClass('active');
+    $('.upper-body-condition-container').toggleClass('active');
   });
   $('.torso-lower').click(function(){
-
+    $(this).toggleClass('active');
+    $('.lower-body-condition-container').toggleClass('active');
   });
   $('.hand-right').click(function(){
-
+    $(this).toggleClass('active');
+    $('.right-hand-condition-container').toggleClass('active');
   });
   $('.hand-left').click(function(){
-
+    $(this).toggleClass('active');
+    $('.left-hand-condition-container').toggleClass('active');
   });
   $('.forearm-right').click(function(){
-
+    $(this).toggleClass('active');
+    $('.right-arm-condition-container').toggleClass('active');
   });
   $('.forearm-left').click(function(){
-
+    $(this).toggleClass('active');
+    $('.left-arm-condition-container').toggleClass('active');
   });
   $('.foot-right').click(function(){
-
+    $(this).toggleClass('active');
+    $('.right-foot-condition-container').toggleClass('active');
   });
   $('.foot-left').click(function(){
-
+    $(this).toggleClass('active');
+    $('.left-foot-condition-container').toggleClass('active');
   });
   $('.calf-right').click(function(){
-
+    $(this).toggleClass('active');
+    $('.right-calf-condition-container').toggleClass('active');
   });
   $('.calf-left').click(function(){
-
+    $(this).toggleClass('active');
+    $('.left-calf-condition-container').toggleClass('active');
   });
   $('.thigh-right').click(function(){
-
+    $(this).toggleClass('active');
+    $('.right-thigh-condition-container').toggleClass('active');
   });
   $('.thigh-left').click(function(){
+    $(this).toggleClass('active');
+    $('.left-thigh-condition-container').toggleClass('active');
 
   });
 });
