@@ -4372,7 +4372,10 @@ svg {
 .tg .tg-yw4l{vertical-align:top}
 .tg .tg-m8xr{background-color:#006eb6;color:#ffffff;vertical-align:top}
 
-
-
-
-
+.print-profile {
+  cursor: pointer;
+}
+.print-profile:hover {
+  color: #666;
+  
+}

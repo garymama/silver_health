@@ -155,7 +155,7 @@
                   <ul class="nav child_menu">
                     <li><a >Work Flow Management</a></li>
                     <li><a >Staff Records</a></li>
-                    <li><a >Staff Records</a></li>
+                    <li><a >Charges Records</a></li>
                     <li><a >Catering Records</a></li>
                   </ul>
                 </li>
@@ -180,7 +180,7 @@
                 <div class="control-group">
                   <div class="controls">
                     <div class="col-md-12 xdisplay_inputx form-group has-feedback">
-                      <button type="button" class="btn btn-info" >Cancel</button>
+                      <button type="button" class="btn btn-info" onclick="location.href='caring_plan.html';">Cancel</button>
                     </div>
                   </div>
                 </div>
@@ -1088,11 +1088,17 @@
 
   <script>
   $(document).ready(function() {
-    $('#wizard').smartWizard();
+    $('#wizard').smartWizard({
+      labelNext:'NEXT',
+      labelFinish:'CREATE',
+      labelPrevious:'PREVIOUS',
+      enableFinishButton: false,
+      onFinish: goToSummary
+    });
 
-    $('.buttonNext').addClass('btn btn-success');
-    $('.buttonPrevious').addClass('btn btn-primary');
-    $('.buttonFinish').addClass('btn btn-default');
+    $('.buttonNext').addClass('btn btn-primary pull-right');
+    $('.buttonPrevious').addClass('btn btn-info pull-right');
+    $('.buttonFinish').addClass('btn btn-success pull-right');
   //Body
 
   $('.head').click(function(){
@@ -1146,8 +1152,10 @@
   $('.thigh-left').click(function(){
     $(this).toggleClass('active');
     $('.left-thigh-condition-container').toggleClass('active');
-
   });
+  function goToSummary(){
+    window.location.href = 'profile.html';
+  }
 });
 </script>
 </body>
