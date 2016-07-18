@@ -4387,4 +4387,17 @@ svg {
   margin-bottom: 0;
 }
 
+.tg  {border-collapse:collapse;border-spacing:0;margin: 10px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-yw4l{vertical-align:top}
+.tg .tg-m8xr{background-color:#006eb6;color:#ffffff;vertical-align:top}
 
+.print-profile {
+  cursor: pointer;
+}
+.print-profile:hover {
+  color: #666;
+  
+}
