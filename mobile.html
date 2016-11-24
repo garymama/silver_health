@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SMART Geriatric Monitoring Platform | </title>
+
+    <!-- Bootstrap -->
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="build/css/custom.css" rel="stylesheet">
+  </head>
+
+  <body class="nav-md">
+    <input id="mobile-bp-input" placeholder="Input blood pressure" />
+    <button id="mobile-submit-button">Submit</button>
+
+    <!-- jQuery -->
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Chart.js -->
+    <script src="vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="js/moment/moment.min.js"></script>
+    <script src="js/datepicker/daterangepicker.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="build/js/custom.min.js"></script>
+    <!-- Json2.js -->
+    <script src="js/json2/json2.min.js"></script>
+    <!-- js-cookie.js -->
+    <script src="js/js-cookie/js-cookie.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        var vitalSigns = [
+          { 'name' : 'bloodPressureSystole', 'value' : '200'},
+          { 'name' : 'bloodPressureDiastole', 'value' : '100'},
+          { 'name' : 'pulse', 'value' : '70'},
+          { 'name' : 'bloodSugar', 'value' : '9.0'},
+          { 'name' : 'cholesterol', 'value' : '5.0'}
+        ];
+
+        Cookies.set('vitalSigns', JSON.stringify(vitalSigns));
+      });
+
+      $('#mobile-submit-button').click(function(){
+        var inputValueBloodPressure = $('#mobile-bp-input').val();
+      });
+    </script>
+  </body>
+</html>
