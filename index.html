@@ -348,10 +348,12 @@
               data: [5.3, 5.5, 5.4, 5.0, 5.8, 5.6, 5.8]
             }];
 
+        var dateLabels = ["30 Jun", "01 Jul", "02 Jul","03 Jul", "04 Jul", "05 Jul", "06 Jul"];
+        currentDataName = data_pressure;
         var lineChart = new Chart(ctx, {
           type: 'line',
           data: {
-            labels: ["30 Jun", "01 Jul", "02 Jul","03 Jul", "04 Jul", "05 Jul", "06 Jul"],
+            labels: dateLabels,
             datasets: data_pressure
           },
           options: {
@@ -385,11 +387,11 @@
             case 'data_cholesterol':
               dataName = data_cholesterol;
           }
-
+          currentDataName = dataName;
           lineChart = new Chart(ctx, {
             type: 'line',
             data: {
-              labels: ["30 Jun", "01 Jul", "02 Jul","03 Jul", "04 Jul", "05 Jul", "06 Jul"],
+              labels: dateLabels,
               datasets: dataName
             },
             options: {
@@ -404,22 +406,31 @@
           });
         });
 
+        var newMeasurement = {};
+        var currentDataName; // Remembers which data view currently is displayed so as to update the correct chart
+
         $('.measure-btn').click(function(){
           window.open('mobile.html');
         });
 
         $('.synchronize-btn').click(function(){
           var getCookies = Cookies.get('vitalSigns');
-          var newMeasurement = $.parseJSON(getCookies);
+          var newMeasurement = $.parseJSON(getCookies); // Saves newly grabbed values
 
-          alert(
-            newMeasurement[0].name + ': ' + newMeasurement[0].value + '\n' +
-            newMeasurement[1].name + ': ' + newMeasurement[1].value + '\n' +
-            newMeasurement[2].name + ': ' + newMeasurement[2].value + '\n' +
-            newMeasurement[3].name + ': ' + newMeasurement[3].value + '\n' +
-            newMeasurement[4].name + ': ' + newMeasurement[4].value + '\n' +
-            newMeasurement[5].name + ': ' + newMeasurement[5].value
-        );
+          // Push new values into datasets for chart plotting
+          dateLabels.push(newMeasurement[0].value);
+          data_pressure[0].data.push(parseInt(newMeasurement[1].value));
+          data_pressure[1].data.push(parseInt(newMeasurement[2].value));
+          data_pulse[0].data.push(parseInt(newMeasurement[3].value));
+          data_sugar[0].data.push(parseInt(newMeasurement[4].value));
+          data_cholesterol[0].data.push(parseInt(newMeasurement[5].value));
+
+          // Redraw charts with new data
+          lineChart.data.datasets = currentDataName;
+          lineChart.data.labels = dateLabels;
+          lineChart.update();
+
+          // TODO: Validation needed to make sure latest grabbed data is not duplicate, currently
         });
 
       });
