@@ -64,7 +64,11 @@
 
         var pushNewValues = function() {
           for ( i=0; i < vitalSigns.length; i++ ) {
-            vitalSigns[i].value = $(vitalSignsList[i]).val();
+            if ($(vitalSignsList[i]).val()) {
+                vitalSigns[i].value = $(vitalSignsList[i]).val();
+            } else {
+              vitalSigns[i].value = 0;
+            }
           }
         };
 
