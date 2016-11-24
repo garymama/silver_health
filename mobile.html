@@ -19,8 +19,20 @@
   </head>
 
   <body class="nav-md">
-    <input id="mobile-bp-input" placeholder="Input blood pressure" />
-    <button id="mobile-submit-button">Submit</button>
+    <div class="mobile-input-view">
+      <input id="bloodPressureSystole" placeholder="Input blood pressure (sys)" />mm/Hg
+      <br />
+      <input id="bloodPressureDiastole" placeholder="Input blood pressure (dia)" />mm/Hg
+      <br />
+      <input id="pulse" placeholder="Input pulse" />pulse/min
+      <br />
+      <input id="bloodSugar" placeholder="Input blood sugar" />mmol/L
+      <br />
+      <input id="cholesterol" placeholder="Input cholesterol" />mmol/L
+      <br />
+      <button id="mobile-submit-button" class="btn btn-success">Submit</button>
+    </div>
+
 
     <!-- jQuery -->
     <script src="vendors/jquery/dist/jquery.min.js"></script>
@@ -41,19 +53,27 @@
     <script>
       $(document).ready(function(){
         var vitalSigns = [
-          { 'name' : 'bloodPressureSystole', 'value' : '200'},
-          { 'name' : 'bloodPressureDiastole', 'value' : '100'},
-          { 'name' : 'pulse', 'value' : '70'},
-          { 'name' : 'bloodSugar', 'value' : '9.0'},
-          { 'name' : 'cholesterol', 'value' : '5.0'}
+          { 'name' : 'bloodPressureSystole', 'value' : ''},
+          { 'name' : 'bloodPressureDiastole', 'value' : ''},
+          { 'name' : 'pulse', 'value' : ''},
+          { 'name' : 'bloodSugar', 'value' : ''},
+          { 'name' : 'cholesterol', 'value' : ''}
         ];
 
-        Cookies.set('vitalSigns', JSON.stringify(vitalSigns));
+        var vitalSignsList = ['#bloodPressureSystole', '#bloodPressureDiastole', '#pulse', '#bloodSugar', '#cholesterol'];
+
+        var pushNewValues = function() {
+          for ( i=0; i < vitalSigns.length; i++ ) {
+            vitalSigns[i].value = $(vitalSignsList[i]).val();
+          }
+        };
+
+        $('#mobile-submit-button').click(function(){
+          pushNewValues();
+          Cookies.set('vitalSigns', JSON.stringify(vitalSigns));
+        });
       });
 
-      $('#mobile-submit-button').click(function(){
-        var inputValueBloodPressure = $('#mobile-bp-input').val();
-      });
     </script>
   </body>
 </html>
