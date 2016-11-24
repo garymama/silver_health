@@ -403,14 +403,23 @@
             }
           });
         });
-        
+
         $('.measure-btn').click(function(){
           window.open('mobile.html');
         });
 
         $('.synchronize-btn').click(function(){
           var getCookies = Cookies.get('vitalSigns');
-          var newMeasurment = $.parseJSON(getCookies);
+          var newMeasurement = $.parseJSON(getCookies);
+
+          alert(
+            newMeasurement[0].name + ': ' + newMeasurement[0].value + '\n' +
+            newMeasurement[1].name + ': ' + newMeasurement[1].value + '\n' +
+            newMeasurement[2].name + ': ' + newMeasurement[2].value + '\n' +
+            newMeasurement[3].name + ': ' + newMeasurement[3].value + '\n' +
+            newMeasurement[4].name + ': ' + newMeasurement[4].value + '\n' +
+            newMeasurement[5].name + ': ' + newMeasurement[5].value
+        );
         });
 
       });

@@ -20,6 +20,11 @@
 
   <body class="nav-md">
     <div class="mobile-input-view">
+      <p>
+        Input values below. <br />On submission, empty values will be converted to 0. <br />Currently there are is validation function to ensure values are integers.
+      </p>
+      <input id="measurementDate" placeholder="Input date (dd Mmm)" />
+      <br />
       <input id="bloodPressureSystole" placeholder="Input blood pressure (sys)" />mm/Hg
       <br />
       <input id="bloodPressureDiastole" placeholder="Input blood pressure (dia)" />mm/Hg
@@ -53,6 +58,7 @@
     <script>
       $(document).ready(function(){
         var vitalSigns = [
+          { 'name' : 'measurementDate', 'value' : ''},
           { 'name' : 'bloodPressureSystole', 'value' : ''},
           { 'name' : 'bloodPressureDiastole', 'value' : ''},
           { 'name' : 'pulse', 'value' : ''},
@@ -60,7 +66,7 @@
           { 'name' : 'cholesterol', 'value' : ''}
         ];
 
-        var vitalSignsList = ['#bloodPressureSystole', '#bloodPressureDiastole', '#pulse', '#bloodSugar', '#cholesterol'];
+        var vitalSignsList = ['#measurementDate', '#bloodPressureSystole', '#bloodPressureDiastole', '#pulse', '#bloodSugar', '#cholesterol'];
 
         var pushNewValues = function() {
           for ( i=0; i < vitalSigns.length; i++ ) {
