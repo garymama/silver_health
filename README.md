@@ -6,6 +6,7 @@ https://colorlib.com/polygon/gentelella/index.html
 # Home Page
 https://garymama.github.io/silver_health
 
+# Setup Guide
 Run `npm install` to install all dependencies.
 
 `gulp` to start the server.
