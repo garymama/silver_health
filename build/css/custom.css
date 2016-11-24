@@ -2,7 +2,7 @@
 .left_col {
   background: #ffffff;
   border-right: solid 1px #cccccc;
-  width: 100%; 
+  width: 100%;
   height: 100%;
 }
 
@@ -91,7 +91,7 @@
    }
 
 .nav-sm ul.nav.child_menu li a {
-  text-align: left !important; 
+  text-align: left !important;
   padding: 15px 20px;}
 
 .nav-sm .profile {
@@ -487,7 +487,7 @@ a:hover, a:focus {
   font-size: 18px;
   float: left;
   line-height: 60px;
-} 
+}
 .main_header .nav.navbar-nav > li > a {
   color: #ffffff !important;
   font-size: 18px;
@@ -1326,7 +1326,7 @@ ul.msg_list li a .message {
   border-top-right-radius: 0; }
 
 .dropdown-menu > li > a {
-  color: #5A738E; 
+  color: #5A738E;
   padding: 15px;
 }
 
@@ -1512,9 +1512,9 @@ span.right {
 .tile_count .tile_stats_count .count {
   font-size: 20px; }
 .tile_count .tile_stats_count .count small {
-  font-size: 50%; } 
+  font-size: 50%; }
 .tile_count .tile_stats_count .count i {
-  font-style: normal; } 
+  font-style: normal; }
 
 
 @media (min-width: 768px) {
@@ -1543,7 +1543,7 @@ span.right {
   overflow: hidden;
   text-overflow: ellipsis; }
 .tile_count .tile_stats_count .count {
-  background-color: #ffffff; 
+  background-color: #ffffff;
   padding: 90px 10px;}
 
 .tile_count .tile_stats_count .count_bottom i {
@@ -4231,7 +4231,7 @@ ul.notifications {
 
 /** /FullCalendar **/
 /** Dropzone.js **/
-.dropzone {    
+.dropzone {
     min-height: 170px;
     padding: 10px 10px;
     margin-left: 5%;
@@ -4259,7 +4259,7 @@ svg {
 .hand-left,
 .forearm-left,
 .arm-left,
-.head, 
+.head,
 .torso-upper,
 .torso-lower,
 .thigh-right,
@@ -4277,7 +4277,7 @@ svg {
 .hand-left:hover,
 .forearm-left:hover,
 .arm-left:hover,
-.head:hover, 
+.head:hover,
 .torso-upper:hover,
 .torso-lower:hover,
 .thigh-right:hover,
@@ -4296,7 +4296,7 @@ svg {
 .hand-left:active,
 .forearm-left:active,
 .arm-left:active,
-.head:active, 
+.head:active,
 .torso-upper:active,
 .torso-lower:active,
 .thigh-right:active,
@@ -4311,7 +4311,7 @@ svg {
 .hand-left.active,
 .forearm-left.active,
 .arm-left.active,
-.head.active, 
+.head.active,
 .torso-upper.active,
 .torso-lower.active,
 .thigh-right.active,
@@ -4399,5 +4399,22 @@ svg {
 }
 .print-profile:hover {
   color: #666;
-  
+
 }
+
+/** Mobile input view styles **/
+.mobile-input-view {
+  background-color: #ffffff;
+  color: #282828;
+  padding: 200px;
+}
+
+.mobile-input-view input {
+ border: 1px solid #a4a5a8;
+ border-radius: 3px;
+ color: #282828;
+ padding: 5px 5px;
+ margin: 0 5px 20px 0;
+ width: 250px;
+}
+/** /Mobile input view styles **/
