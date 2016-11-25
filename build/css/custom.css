@@ -4432,12 +4432,17 @@ svg {
 }
 
 .mobile-input-view input {
- border: 1px solid #a4a5a8;
+ border: 2px solid #c9cacd;
  border-radius: 3px;
  color: #282828;
  padding: 5px 5px;
  margin: 0 0 15px 0;
+ transition: border-color linear 0.2s;
  width: 100%;
+}
+
+.mobile-input-view input:active, .mobile-input-view input:focus {
+  border-color: #a4a5a8;
 }
 
 .mobile-input-view button {
