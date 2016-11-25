@@ -4403,10 +4403,32 @@ svg {
 }
 
 /** Mobile input view styles **/
+.marvel-device {
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .mobile-input-view {
   background-color: #ffffff;
   color: #282828;
-  padding: 200px;
+  height: 440px;
+  overflow-y: auto;
+  padding-top: 15px;
+}
+
+.iphone-navbar {
+  background-color: #2cafed;
+  font-size: 18px;
+  height: 40px;
+  padding: 9px 0 0 15px;
+  text-align: left;
+  width: 100%;
+}
+
+.iphone-navbar .glyphicon {
+  padding-right: 15px;
 }
 
 .mobile-input-view input {
@@ -4414,7 +4436,17 @@ svg {
  border-radius: 3px;
  color: #282828;
  padding: 5px 5px;
- margin: 0 5px 20px 0;
- width: 250px;
+ margin: 0 0 15px 0;
+ width: 100%;
+}
+
+.mobile-input-view button {
+  width: 100%;
+}
+
+.mobile-input-view .col-xs-3 {
+  margin-top: 6px;
+  margin-left: -10px;
+  text-align: left;
 }
 /** /Mobile input view styles **/
