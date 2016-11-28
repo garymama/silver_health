@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SMART Geriatric Monitoring Platform | </title>
+
+    <!-- Bootstrap -->
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="css/devices/devices.min.css" rel="stylesheet" />
+    <!-- Custom Theme Style -->
+    <link href="build/css/custom.css" rel="stylesheet">
+  </head>
+
+  <body class="nav-md">
+
+    <div class="marvel-device iphone4s silver">
+      <div class="top-bar"></div>
+      <div class="sleep"></div>
+      <div class="volume"></div>
+      <div class="camera"></div>
+      <div class="sensor"></div>
+      <div class="speaker"></div>
+      <div class="screen">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="iphone-navbar">
+              Silver Healthily
+              <span class="glyphicon glyphicon-menu-hamburger pull-right"></span>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-input-view container-fluid">
+          <!-- <p>
+            Input values below. <br />On submission, empty values will be converted to 0. <br />Currently there are is validation function to ensure values are integers.
+          </p> -->
+
+          <div class="row">
+            <div class="col-xs-9">
+              <input id="measurementDate" placeholder="Input date (dd Mmm)" />
+            </div>
+            <div class="col-xs-3">
+
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-xs-9">
+              <input id="bloodPressureSystole" placeholder="Input blood pressure (sys)" />
+            </div>
+            <div class="col-xs-3">
+              mm/Hg
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-xs-9">
+              <input id="bloodPressureDiastole" placeholder="Input blood pressure (dia)" />
+            </div>
+            <div class="col-xs-3">
+              mm/Hg
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-xs-9">
+              <input id="pulse" placeholder="Input pulse" />
+            </div>
+            <div class="col-xs-3">
+              pulse/min
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-xs-9">
+              <input id="bloodSugar" placeholder="Input blood sugar" />
+            </div>
+            <div class="col-xs-3">
+              mmol/L
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-xs-9">
+              <input id="cholesterol" placeholder="Input cholesterol" />
+            </div>
+            <div class="col-xs-3">
+              mmol/L
+            </div>
+          </div>
+
+
+          <button id="mobile-submit-button" class="btn btn-success">Submit</button>
+        </div>
+      </div>
+      <div class="home"></div>
+      <div class="bottom-bar"></div>
+    </div>
+    <!-- jQuery -->
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Chart.js -->
+    <script src="vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="js/moment/moment.min.js"></script>
+    <script src="js/datepicker/daterangepicker.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="build/js/custom.min.js"></script>
+    <!-- Json2.js -->
+    <script src="js/json2/json2.min.js"></script>
+    <!-- js-cookie.js -->
+    <script src="js/js-cookie/js-cookie.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        var vitalSigns = [
+          { 'name' : 'measurementDate', 'value' : ''},
+          { 'name' : 'bloodPressureSystole', 'value' : ''},
+          { 'name' : 'bloodPressureDiastole', 'value' : ''},
+          { 'name' : 'pulse', 'value' : ''},
+          { 'name' : 'bloodSugar', 'value' : ''},
+          { 'name' : 'cholesterol', 'value' : ''}
+        ];
+
+        var vitalSignsList = ['#measurementDate', '#bloodPressureSystole', '#bloodPressureDiastole', '#pulse', '#bloodSugar', '#cholesterol'];
+
+        var pushNewValues = function() {
+          for ( i=0; i < vitalSigns.length; i++ ) {
+            if ($(vitalSignsList[i]).val()) {
+                vitalSigns[i].value = $(vitalSignsList[i]).val();
+            } else {
+              vitalSigns[i].value = 0;
+            }
+          }
+        };
+
+        $('#mobile-submit-button').click(function(){
+          pushNewValues();
+          Cookies.set('vitalSigns', JSON.stringify(vitalSigns));
+        });
+      });
+
+    </script>
+  </body>
+</html>
