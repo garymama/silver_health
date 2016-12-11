@@ -4455,3 +4455,166 @@ svg {
   text-align: left;
 }
 /** /Mobile input view styles **/
+
+/** Connection page styles **/
+.connection .video-call-tile {
+  background-color: #fcfcfc;
+  height: 420px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.connection .video-call-tile video {
+  height: auto;
+  left: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 1;
+}
+
+.connection .video-call-tile video::-webkit-media-controls {
+  display: none !important;
+}
+
+.connection .call-control-panel {
+  bottom: 20px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.connection .in-call-control-panel {
+  bottom: 20px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.connection .full-screen-button.call-buttons {
+  bottom: 20px;
+  right: 20px;
+  position: absolute;
+  z-index: 1;
+}
+
+.connection .call-buttons {
+  background-color: #2977BA;
+  border-radius: 50%;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  height: 60px;
+  position: relative;
+  width: 60px;
+}
+
+.connection .call-control-panel .call-buttons {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  transition: background-color linear 0.2s, color linear 0.2s;
+}
+
+.connection .call-control-panel .call-buttons:hover {
+  background-color: #ffffff;
+  color: #2977BA;
+}
+
+.connection .call-control-panel .call-buttons:first-child {
+  margin-right: 20px;
+}
+
+.connection .call-control-panel .call-buttons:last-child {
+  margin-left: 20px;
+}
+
+.connection .in-call-control-panel .call-buttons, .connection .full-screen-button {
+  opacity: 0.7;
+  transition: opacity linear 0.2s;
+}
+
+.connection .in-call-control-panel .call-buttons:hover, .connection .full-screen-button:hover {
+  opacity: 1;
+}
+
+.connection .in-call-control-panel .call-buttons:nth-child(2) {
+  margin: 0 10px;
+}
+
+.connection .call-buttons i {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.connection .call-buttons.hang-up {
+  transform: rotate(135deg);
+}
+
+.connection .video-call-tile .pre-call-screen {
+  background-color: #2977BA;
+  height: 100%;
+  left: 0;
+  padding-top: 60px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.connection .video-call-tile .pre-call-screen .doctor-avatar {
+  background-image: url(../../images/doctor_avatar.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 6px solid #ffffff;
+  border-radius: 50%;
+  height: 200px;
+  margin: 0 auto;
+  position: relative;
+  width: 200px;
+}
+
+.connection .video-call-tile .pre-call-screen .doctor-avatar .loading {
+  animation: call-loading 1.5s infinite;
+  background-color: transparent;
+  border: 6px solid #fff;;
+  border-radius: 50%;
+  display: none;
+  height: 100%;
+  opacity: 1;
+  position: absolute;
+  transform-origin: center;
+  width: 100%;
+}
+
+@keyframes call-loading {
+  0% {
+    transform: scale(1.1);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.13);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.20);
+  }
+}
+
+.connection .video-call-tile .pre-call-screen h4 {
+  color: #ffffff;
+  font-weight: normal;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.connection .dashboard_chart .x_panel {
+  height: 420px;
+}

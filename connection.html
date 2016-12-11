@@ -134,11 +134,11 @@
                 <ul class="nav side-menu">
                   <li class="active"><a><i class="fa fa-tachometer"></i> Elderly Portal <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li class="active"><a href="index.html">Measurements</a></li>
+                      <li><a href="index.html">Measurements</a></li>
                       <li><a >Analysis</a></li>
                       <li><a >Improvements</a></li>
                       <li><a >Control</a></li>
-                      <li><a href="connection.html">Connection</a></li>
+                      <li class="active"><a href="connection.html">Connection</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-user-md"></i> Nursing Care Portal <span class="fa fa-chevron-down"></span></a>
@@ -172,6 +172,7 @@
               <div class="nav toggle">
                 <a id="menu_toggle"><i class="fa fa-bars"></i></a>
               </div>
+              <div class="header_navigation">Connection</div>
 
               <ul class="nav navbar-nav navbar-right">
                 <div class="nav-right-widget pull-right">
@@ -192,79 +193,66 @@
         <!-- /top navigation -->
 
         <!-- page content -->
-        <div class="right_col" role="main">
-          <!-- top tiles -->
-          <div class="row tile_count">
-            <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_measure active" id="data_pressure">
-              <div class="measure_left"><i class="fa fa-tint"></i></div>
-              <div class="measure_right">
-                <div class="measure_title">Blood Presure</div>
-                <div class="measure_desc">Sys <span class="measure_data">151</span> mm/Hg</div>
-                <div class="measure_desc">Dia <span class="measure_data">92</span> mm/Hg</div>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_measure" id="data_pulse">
-              <div class="measure_left"><i class="fa fa-heartbeat"></i></div>
-              <div class="measure_right">
-                <div class="measure_title">Pulse</div>
-                <div class="measure_desc measure_desc_single"><span class="measure_data">70</span> pulse/min</div>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_measure" id="data_sugar">
-              <div class="measure_left"><i class="fa fa-cubes"></i></div>
-              <div class="measure_right">
-                <div class="measure_title">Blood Sugar</div>
-                <div class="measure_desc measure_desc_single"><span class="measure_data">9.4</span> mmol/L</div>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_measure" id="data_cholesterol">
-              <div class="measure_left"><i class="fa fa-heart"></i></div>
-              <div class="measure_right">
-                <div class="measure_title">Cholesterol</div>
-                <div class="measure_desc measure_desc_single"><span class="measure_data">5.8</span> mmol/L</div>
-              </div>
-            </div>
-          </div>
-          <!-- /top tiles -->
-
+        <div class="right_col connection" role="main">
           <div class="row">
-            <div class="col-xs-12 dashboard_chart">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Weekly Summary</h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
+            <div class="col-lg-6 col-md-12">
+              <div class="video-call-tile">
+                <video id="doctor-call" src="images/doctor.mp4" autoplay="true" controls="false" loop="true"></video>
+                <div class="pre-call-screen">
+                  <div class="doctor-avatar"><div class="loading"></div></div>
+                  <h4>Dr Lee</h4>
+                </div>
+                <div class="call-control-panel">
+                  <div class="call-buttons video-call-button" data-toggle="tooltip" data-placement="top" title="Video call">
+                    <i class="fa fa-lg fa-video-camera" aria-hidden="true"></i>
                   </div>
-                  <div class="x_content" id="lineChart-container">
-                    <canvas id="lineChart" height="100"></canvas>
+                  <div class="call-buttons voice-call-button" data-toggle="tooltip" data-placement="top" title="Voice call">
+                    <i class="fa fa-lg fa-phone" aria-hidden="true"></i>
                   </div>
                 </div>
+                <div class="in-call-control-panel">
+                  <div class="call-buttons video-call-button" data-toggle="tooltip" data-placement="top" title="Turn off camera">
+                    <i class="fa fa-lg fa-video-camera" aria-hidden="true"></i>
+                  </div>
+                  <div class="call-buttons voice-call-button" data-toggle="tooltip" data-placement="top" title="Turn off microphone">
+                    <i class="fa fa-lg fa-microphone" aria-hidden="true"></i>
+                  </div>
+                  <div class="call-buttons voice-call-button hang-up bg-red">
+                    <i class="fa fa-lg fa-phone" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="full-screen-button call-buttons" data-toggle="tooltip" data-placement="top" title="Full screen">
+                  <i class="fa fa-lg fa-expand"></i>
+                </div>
               </div>
-          </div>
-
-          <!-- /charts -->
-
-          <div class="row">
-            <div class="col-xs-12">
-              <button class="btn btn-danger pull-right measure-btn">Measure</button>
-              <button class="btn btn-info pull-right synchronize-btn">Synchronize data</button>
+            </div>
+            <div class="col-lg-6 col-md-12 dashboard_chart">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Blood Pressure Records</h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Settings 1</a>
+                        </li>
+                        <li><a href="#">Settings 2</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content" id="lineChart-container">
+                  <canvas id="lineChart" height="130"></canvas>
+                </div>
+              </div>
             </div>
           </div>
-
         </div>
         <!-- /page content -->
       </div>
@@ -282,15 +270,63 @@
 
     <!-- Custom Theme Scripts -->
     <script src="build/js/custom.min.js"></script>
-
-    <!-- Json2.js -->
-    <script src="js/json2/json2.min.js"></script>
     <!-- js-cookie.js -->
-    <script src="js/js-cookie/js-cookie.min.js"></script>
 
     <script>
+      var hideThis = function(element) {
+        element.css('z-index', '1');
+      };
+      var showThis = function(element) {
+        element.hide();
+        element.css('z-index', '2');
+        element.fadeIn();
+      };
+      var startLoading = function() {
+        $('.pre-call-screen h4').append(' - Calling...');
+        $('.loading').show();
+      };
+      var startCall = function() {
+        hideThis($('.call-control-panel'));
+        $('.loading').hide();
+        hideThis($('.pre-call-screen'));
+        $('.pre-call-screen h4').html('Dr Lee');
+        showThis($('.in-call-control-panel'));
+        showThis($('.video-call-tile video'));
+        showThis($('.full-screen-button'));
+        $('.video-call-tile video').get(0).currentTime = 0;
+      };
+      var endCall = function() {
+        hideThis($('.in-call-control-panel'));
+        hideThis($('.video-call-tile video'));
+        hideThis($('.full-screen-button'));
+        showThis($('.call-control-panel'));
+        showThis($('.pre-call-screen'));
+      };
+      var setBoxes = function() {
+        var vidH = $('.connection .video-call-tile').css('height');
+        var vidW = $('.connection .video-call-tile').css('width');
+        $('.connection .video-call-tile .pre-call-screen, .connection .video-call-tile video').css('height', vidH);
+        $('.connection .video-call-tile .pre-call-screen, .connection .video-call-tile video').css('width', vidW);
+      }
+
       $(document).ready(function() {
-        // Line chart
+        $('[data-toggle="tooltip"]').tooltip();
+
+        $('.call-control-panel .video-call-button').click(function() {
+          startLoading();
+          window.setTimeout(startCall, 3000);
+        });
+
+        $('.in-call-control-panel .hang-up').click(function() {
+          endCall();
+        });
+
+        setBoxes();
+
+        $(window).resize(function() {
+          setBoxes();
+        });
+
         var ctx = document.getElementById("lineChart");
         var dataName = [];
             data_pressure = [{
@@ -366,73 +402,6 @@
             }
           }
         });
-        $('.tile_stats_measure').click(function(){
-          $('#lineChart').remove(); // this is my <canvas> element
-          $('#lineChart-container').append('<canvas id="lineChart" height="100"><canvas>');
-          ctx = $('#lineChart');
-          $('.tile_stats_measure').removeClass('active');
-          $(this).addClass('active');
-          var dataValue = $(this).attr('id');
-          console.log(dataValue);
-          switch (dataValue){
-            case 'data_pressure':
-              dataName = data_pressure;
-              break;
-            case 'data_pulse':
-              dataName = data_pulse;
-              break;
-            case 'data_sugar':
-              dataName = data_sugar;
-              break;
-            case 'data_cholesterol':
-              dataName = data_cholesterol;
-          }
-          currentDataName = dataName;
-          lineChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-              labels: dateLabels,
-              datasets: dataName
-            },
-            options: {
-              scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                  }]
-              }
-            }
-          });
-        });
-
-        var newMeasurement = {};
-        var currentDataName; // Remembers which data view currently is displayed so as to update the correct chart
-
-        $('.measure-btn').click(function(){
-          window.open('mobile.html');
-        });
-
-        $('.synchronize-btn').click(function(){
-          var getCookies = Cookies.get('vitalSigns');
-          var newMeasurement = $.parseJSON(getCookies); // Saves newly grabbed values
-
-          // Push new values into datasets for chart plotting
-          dateLabels.push(newMeasurement[0].value);
-          data_pressure[0].data.push(parseInt(newMeasurement[1].value));
-          data_pressure[1].data.push(parseInt(newMeasurement[2].value));
-          data_pulse[0].data.push(parseInt(newMeasurement[3].value));
-          data_sugar[0].data.push(parseInt(newMeasurement[4].value));
-          data_cholesterol[0].data.push(parseInt(newMeasurement[5].value));
-
-          // Redraw charts with new data
-          lineChart.data.datasets = currentDataName;
-          lineChart.data.labels = dateLabels;
-          lineChart.update();
-
-          // TODO: Validation needed to make sure latest grabbed data is not duplicate, currently
-        });
-
       });
     </script>
   </body>
